@@ -37,7 +37,7 @@
             width: 20vmin;
             height: 30vmin;
             background-image: var(--color-glass);
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 80%);
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
             opacity: .8;
             position: relative;
         }
@@ -111,7 +111,7 @@
             top: 0;
             left: 0;
             width: 6vmin;
-            height: 2vmin;
+            height: 6vmin;
             transform: translate(-69%, -30%) rotate(-5deg);
             border-radius: 10vmin 10vmin 0 0;
             border: 2vmin solid #104d4e;
@@ -138,13 +138,13 @@
         .f-wrapper--2 .flower__leaf:not(:first-child){
             width: 3.8vmin;
             height: 10vmin;
-            background-image: linear-gradient(to left bottom, #ff43b6 ,#c22887, #1a233a 99%);
+            background-image: linear-gradient(to bottom, #ff43b6 ,#c22887, #1a233a 99%);
         }
 
         .f-wrapper--3 .flower__leaf:not(:first-child){
             width: 3.8vmin;
             height: 10vmin;
-            background-image: linear-gradient(to left bottom, #ad2be0, #712291 ,#1a233a 99%);
+            background-image: linear-gradient(to bottom, #ad2be0, #712291 ,#1a233a 99%);
         }
 
         .f-wrapper--3 .flower__leaf--1{
@@ -211,7 +211,7 @@
             width: 10vmin;
             height: 12vmin;
             bottom: 3vmin;
-            border-radius: 50% 50% 50% 50%/ 80% 80% 20% 20%;
+            border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
             background-color: #e24f5f;
             background-image: none;
             animation: open-flower--middle 1.4s 1s backwards;
@@ -254,16 +254,16 @@
         }
 
         .flower__fall-down--yellow{
-            animation: flower-fall-down-yellow 8s 1,2s linear forwards;
+            animation: flower-fall-down-yellow 8s 1.2s linear forwards;
         }
 
         .flower__fall-down--pink{
-            animation: flower-fall-down-pink 5s 1,2s linear forwards;
+            animation: flower-fall-down-pink 5s 1.2s linear forwards;
         }
 
         .flower__fall-down--purple{
             bottom: 4vmin;
-            animation: flower-fall-down-purple 6s 1,2s linear , flower-falling 6s 7.2s linear infinite;
+            animation: flower-fall-down-purple 6s 1.2s linear forwards , flower-falling 6s 7.2s linear infinite;
         }
 
         @keyframes open-flower{
@@ -278,7 +278,7 @@
         @keyframes open-flower--middle{
             0%{
                 opacity: 0;
-                transform: translateX(-50%) rotate(0);
+                transform: translateX(-50%) scale(0);
             }
             /* 100%{
                 transform: translateX(-50%) rotate(0deg);
@@ -296,7 +296,7 @@
             }
 
             100%{
-                transform: translate(2vmin, 28vmin);
+                transform: translate(2vmin, 70vmin) rotate(150deg);
             }
         }
 
@@ -350,6 +350,11 @@
             25%{
                 transform-origin: center;
                 transform: translate(-34vmin, 2vmin) rotateY(-84deg) rotateX(35deg);
+            }
+
+            50%{
+                transform-origin: center;
+                transform: translate(-32vmin, -4.2vmin) rotateY(-80deg) rotateX(35deg);
             }
 
             75%{
